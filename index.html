@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$SHARP | All Locks, All Vibes</title>
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --card-bg: #141414;
+            --primary-red: #ff3333;
+            --text-main: #ffffff;
+            --text-muted: #aaaaaa;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Impact', 'Arial Black', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            overflow-x: hidden;
+            letter-spacing: 1px;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+            min-height: 80vh;
+            border-bottom: 3px solid var(--primary-red);
+            background: radial-gradient(circle, #2a0a0a 0%, #0a0a0a 100%);
+        }
+
+        .logo {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            border: 4px solid var(--primary-red);
+            box-shadow: 0 0 30px var(--primary-red);
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 4rem;
+            color: var(--text-main);
+            text-transform: uppercase;
+            text-shadow: 2px 2px 0px var(--primary-red);
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-size: 1.8rem;
+            color: var(--primary-red);
+            text-transform: uppercase;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        /* Call to Action Buttons */
+        .cta-container {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: var(--text-main);
+            background-color: transparent;
+            border: 2px solid var(--primary-red);
+            border-radius: 5px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-red);
+            box-shadow: 0 0 15px var(--primary-red);
+            transform: translateY(-2px);
+        }
+
+        .btn-main {
+            background-color: var(--primary-red);
+        }
+
+        /* CA Box */
+        .ca-container {
+            background-color: var(--card-bg);
+            border: 1px dashed var(--primary-red);
+            padding: 15px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .ca-text {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            word-break: break-all;
+            text-align: left;
+            flex-grow: 1;
+        }
+
+        /* Manifest Section */
+        .manifesto {
+            padding: 60px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: var(--primary-red);
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-family: 'Arial', sans-serif;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        /* Highlights Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid #222;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            transition: border 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--primary-red);
+        }
+
+        .card h3 {
+            font-size: 1.8rem;
+            color: var(--text-main);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+            color: #444;
+            font-family: 'Arial', sans-serif;
+            border-top: 1px solid #111;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <!-- REPLACE 'logo.png' WITH YOUR ACTUAL IMAGE PATH -->
+        <img src="logo.png" alt="$SHARP Logo" class="logo">
+        <h1>$SHARP</h1>
+        <div class="tagline">ALL LOCKS, ALL VIBES.</div>
+
+        <div class="cta-container">
+            <a href="YOUR_PUMP_FUN_LINK" target="_blank" class="btn btn-main">Buy on Pump.fun</a>
+            <a href="YOUR_TELEGRAM_LINK" target="_blank" class="btn">Telegram</a>
+            <a href="YOUR_X_TWITTER_LINK" target="_blank" class="btn">Twitter / X</a>
+        </div>
+
+        <div class="ca-container">
+            <div class="ca-text" id="caToken">Contract Address: LAUNCHING SOON ON PUMP.FUN</div>
+            <button class="btn" style="padding: 5px 15px; font-size: 0.9rem;" onclick="copyCA()">Copy</button>
+        </div>
+    </section>
+
+    <!-- MANIFESTO SECTION -->
+    <section class="manifesto">
+        <h2>THE METAGAME</h2>
+        <p>
+            No hedging. No safe plays. We track the sharp money, hunt the highest probabilities, and ride the momentum until the bonding curve explodes. If you're looking for a safe index fund, look somewhere else. This is 24/7 high-stakes volume.
+        </p>
+    </section>
+
+    <!-- FEATURES / MEME STATS -->
+    <section class="grid">
+        <div class="card">
+            <h3>69k Cap</h3>
+            <p>The only target that matters. We fill the curve, lock the liquidity, and graduate straight to the main board.</p>
+        </div>
+        <div class="card">
+            <h3>Sharp Tools</h3>
+            <p>Driven by community data, trends, and unmatched market conviction. We pull triggers, we don't hesitate.</p>
+        </div>
+        <div class="card">
+            <h3>Pure Volume</h3>
+            <p>Every transaction builds the reward pool. Traders trade, volume prints, holders win.</p>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 $SHARP Token. Built for degenerates. High risk, high vibes.
+    </footer>
+
+    <script>
+        function copyCA() {
+            const caText = document.getElementById("caToken").innerText.replace("Contract Address: ", "");
+            navigator.clipboard.writeText(caText);
+            alert("Contract Address Copied!");
+        }
+    </script>
+</body>
+</html>
